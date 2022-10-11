@@ -28,11 +28,11 @@ namespace PuYuan
             //注入，這樣在其他類別都可以使用PuYuanContext
             builder.Services.AddTransient<PuYuanContext>();
             //在每個API後面加上單句說明
-            builder.Services.AddSwaggerGen(options =>
-            {
-                var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
-            });
+            //builder.Services.AddSwaggerGen(options =>
+            //{
+            //    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+            //    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+            //});
             
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -96,11 +96,11 @@ namespace PuYuan
             //這邊順序很重要 導向 > 授權 > 驗證 > ...
 
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+            // if (app.Environment.IsDevelopment())
+            // {
+            // }
+            app.UseSwagger();
+            app.UseSwaggerUI();
 
             app.UseHttpsRedirection();
 
