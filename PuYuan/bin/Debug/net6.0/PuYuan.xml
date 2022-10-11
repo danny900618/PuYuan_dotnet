@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PuYuan</name>
+    </assembly>
+    <members>
+        <member name="M:PuYuan.Controllers.AuthController.PostUser(PuYuan.Models.UserLoginViewModel)">
+            <summary>
+            2.登入 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.FriendController.PostFriend(PuYuan.Models.FriendSendViewModel)">
+            <summary>
+            19.送出控糖團邀請
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.FriendController.GetFriendAccept">
+            <summary>
+            20.接受控糖團邀請
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.FriendController.GetFriendRefuse">
+            <summary>
+            21.拒絕控糖團邀請
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.FriendController.GetFriendRemove">
+            <summary>
+            22.刪除控糖團邀請
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.FriendController.GetFriendcode">
+            <summary>
+            16.獲取控糖團邀請碼
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.FriendController.PostNotification(PuYuan.Models.FriendNotificationViewModel)">
+            <summary>
+            36.親友團通知
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.FriendController.DeleteFriendRemove">
+            <summary>
+            37.刪除更多好友
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.FriendController.GetResult">
+            <summary>
+            26. 控糖團結果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.FriendController.GetFriendList">
+            <summary>
+            17.控糖團列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.FriendController.GetRequests">
+            <summary>
+            18.獲取控糖團邀請
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.PasswordController.PostUser(PuYuan.Models.UserForgotViewModel)">
+            <summary>
+            5.忘記密碼
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.PasswordController.PostReset(PuYuan.Models.UserResetViewModel)">
+            <summary>
+            6.重設密碼
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.RegisterController.PostUser(PuYuan.Models.UserViewModel,System.DateTime)">
+            <summary>
+            1.註冊
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.RegisterController.GetUser(System.String)">
+            <summary>
+            38.註冊確認
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.PatchUser(PuYuan.Models.UserInfoViewModel)">
+            <summary>
+            7.個人資訊設定
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.PatchUserDefult(PuYuan.Models.UserSetViewModel)">
+            <summary>
+            11.個人預設值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.PatchUserSetting(PuYuan.Models.UserSettingViewModel)">
+            <summary>
+            35.個人設定
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.PostUserBlood_p(PuYuan.Models.UserBloodPViewModel)">
+            <summary>
+            8.上傳血壓測量結果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.PostUserWeight(PuYuan.Models.UserWeightViewModel)">
+            <summary>
+            9.上傳體重測量結果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.PostUserBlood_s(PuYuan.Models.UserBloodSugarViewModel)">
+            <summary>
+            10.上傳血糖
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.PostUserCare(PuYuan.Models.UserCareViewModel)">
+            <summary>
+            28. 發送關懷諮詢
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.PostUserA1c(PuYuan.Models.UserA1cViewModel)">
+            <summary>
+            33.送糖化血色素
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.DeleteUserA1c">
+            <summary>
+            34.刪除糖化血色素
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.PatchUserMedical(PuYuan.Models.UserMedicalViewModel)">
+            <summary>
+            31. 更新就醫資訊
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.PostUserDrugUsed(PuYuan.Models.UserDrugUsedPostViewModel)">
+            <summary>
+            42.上傳藥物資訊
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.DeleteUserDrugUsed">
+            <summary>
+            43.刪除藥物資訊
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.PostUserDiary(PuYuan.Models.UserDiaryViewModel)">
+            <summary>
+            15.飲食日記
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.GetLastUpload">
+            <summary>
+            25. 最後上傳時間
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.GetUserA1c">
+            <summary>
+            32.糖化血色素
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.GetDrugUsed">
+            <summary>
+            41.藥物資訊
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.PostRecords(PuYuan.Models.RecordsViewModel)">
+            <summary>
+            44.上一筆紀錄資訊
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.DeleteUserRecords(PuYuan.Models.DeleteUserRecordsViewModel)">
+            <summary>
+            40.刪除日記記錄
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.GetUser">
+            <summary>
+            12.個人資訊
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.GetMedical">
+            <summary>
+            30. 就醫資訊
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.GetUserCare">
+            <summary>
+            27. 獲取關懷諮詢
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.UserController.GetUserDiary">
+            <summary>
+            14.日記列表資料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.VerificationController.PostUser(PuYuan.Models.UserSendEmailViewModel)">
+            <summary>
+            3.發送驗證碼
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PuYuan.Controllers.VerificationController.Postcheck(PuYuan.Models.UserCodeckViewModel)">
+            <summary>
+            4.檢查驗證碼
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+    db:
+        image: "mcr.microsoft.com/mssql/server:2022-latest"
+        ports:
+          - "1433:1433"
+
+        environment:
+            SA_PASSWORD: "Ver7CompleXPW"
+            ACCEPT_EULA: "Y"
+    api:
+        depends_on:
+          - db
+        build:  
+          dockerfile: Dockerfile
+        ports:
+          - "8080:80"
+
