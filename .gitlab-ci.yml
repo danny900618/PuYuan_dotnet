@@ -1,4 +1,24 @@
-deploy-job:      # This job runs in the deploy stage.
+stages:
+    - "build"
+    - "test"
+    - "deploy"
+
+build-image:
+  stage: build
+  script:
+    - echo "build docker image..."
+
+test:
+  stage: test
+  dependencies:
+    - "build-image"
+  script:
+    - echo "test..."
+
+deploy-job: 
+  stage: deploy     
+  dependencies:
+    - "test"
   script:
     - echo "Deploying application..."
     - echo "Application successfully deployed."
