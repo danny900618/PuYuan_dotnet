@@ -1,24 +1,26 @@
-stages:
-    - "build"
-    - "test"
-    - "deploy"
+# stages:
+#     - "build"
+    # - "test"
+    # - "deploy"
 
 build-image:
-  stage: build
+  # stage: build
+  tags:
+    - shell
   script:
-    - echo "build docker image..."
+    - docker build -t puyuan_test_image .
 
-test:
-  stage: test
-  dependencies:
-    - "build-image"
-  script:
-    - echo "test.
+# test:
+#   stage: test
+#   dependencies:
+#     - "build-image"
+#   script:
+#     - echo "test.
 
-deploy-job: 
-  stage: deploy     
-  dependencies:
-    - "test"
-  script:
-    - echo "Deploying application..."
-    - echo "Application successfully deployed."
+# deploy-job: 
+#   stage: deploy     
+#   dependencies:
+#     - "test"
+#   script:
+#     - echo "Deploying application..."
+#     - echo "Application successfully deployed."
