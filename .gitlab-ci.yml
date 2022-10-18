@@ -2,7 +2,7 @@
 #     - "build"
     # - "test"
     # - "deploy"
-
+image : docker
 build-image:
   # stage: build
   tags:
