@@ -8,7 +8,7 @@ build-image:
   tags:
     - shell
   script:
-    - docker build -t puyuan_test_image .
+    - docker build -t puyuantestimage .
 
 # test:
 #   stage: test
