@@ -1,14 +1,13 @@
-# stages:
-#     - "build"
-    # - "test"
-    # - "deploy"
+stages:
+    - "build"
+    - "test"
+    - "deploy"
+
 image : docker
 build-image:
-  # stage: build
+  stage: build
   services:
     - docker:dind
-  # tags:
-  #   - shell
   before_script:
     - echo "${DOCKERHUB_PWD}" | docker login -u "${DOCKERHUB_USER}" --password-stdin
   script:
@@ -17,17 +16,17 @@ build-image:
     - docker push $IMAGE_TAG
     - echo "docker push finished"
 
-# test:
-#   stage: test
-#   dependencies:
-#     - "build-image"
-#   script:
-#     - echo "test.
+test:
+  stage: test
+  dependencies:
+    - "build-image"
+  script:
+    - echo "test.
 
-# deploy-job: 
-#   stage: deploy     
-#   dependencies:
-#     - "test"
-#   script:
-#     - echo "Deploying application..."
-#     - echo "Application successfully deployed."
+deploy-job: 
+  stage: deploy     
+  dependencies:
+    - "test"
+  script:
+    - echo "Deploying application..."
+    - echo "Application successfully deployed."
