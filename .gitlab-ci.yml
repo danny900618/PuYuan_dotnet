@@ -5,10 +5,13 @@
 image : docker
 build-image:
   # stage: build
-  tags:
-    - shell
+  # services:
+  #   - docker:dind
+  # tags:
+  #   - shell
   script:
-    - docker build -t puyuantestimage .
+    - echo "docker build"
+    #- docker build -t puyuantestimage .
 
 # test:
 #   stage: test
