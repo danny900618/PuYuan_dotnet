@@ -5,13 +5,17 @@
 image : docker
 build-image:
   # stage: build
-  # services:
-  #   - docker:dind
+  services:
+    - docker:dind
   # tags:
   #   - shell
+  before_script:
+    - echo "${DOCKERHUB_PWD}" | docker login -u "${DOCKERHUB_USER}" --password-stdin
   script:
-    - echo "docker build"
-    #- docker build -t puyuantestimage .
+    - docker build -t puyuantestimage .
+    - echo "docker build finished"
+    - docker push $IMAGE_TAG
+    - echo "docker push finished"
 
 # test:
 #   stage: test
