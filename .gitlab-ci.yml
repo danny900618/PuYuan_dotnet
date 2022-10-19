@@ -21,7 +21,7 @@ test:
   dependencies:
     - "build-image"
   script:
-    - echo "test.
+    - echo "test..."
 
 deploy-job: 
   stage: deploy     
