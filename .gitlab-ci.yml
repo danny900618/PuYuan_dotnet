@@ -17,11 +17,13 @@ build-image:
     - echo "docker push finished"
 
 test:
+  image: gabrielaraujof/nunit-console
   stage: test
   dependencies:
     - "build-image"
   script:
-    - docker run gabrielaraujof/nunit-console nunit PuYuanTests.dll
+    - docker run gabrielaraujof/nunit-console 
+    - nunit-console PuYuanTests.dll
     - echo "NUnit test..."
 
 deploy-job: 
