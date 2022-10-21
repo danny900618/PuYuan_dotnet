@@ -23,7 +23,7 @@ test:
   #   - "build-image"
   script:
     - docker run gabrielaraujof/nunit-console 
-    - nunit-console PuYuanTests.dll
+    # - nunit-console PuYuanTests.dll
     - echo "NUnit test..."
 
 deploy-job: 
