@@ -26,13 +26,13 @@ test:
   script:
     - 'set NUNIT_CONSOLE=%USERPROFILE%\.nuget\packages\nunit.consolerunner\3.15.2\tools\nunit3-console.exe'
     - '"%NUNIT_CONSOLE%" "PuYuanTests.dll" --config=Release --work=.\TestResult --result=TestResult.xml --result=junit-results.xml;transform=nunit3-junit.xslt'
-  artifacts:
-    when: always
-    paths:
-      - TestResult/junit-results.xml
-      - TestResult/TestResult.xml
-    reports:
-      junit: TestResult/junit-results.xml
+  # artifacts:
+  #   when: always
+  #   paths:
+  #     - TestResult/junit-results.xml
+  #     - TestResult/TestResult.xml
+  #   reports:
+  #     junit: TestResult/junit-results.xml
 
 
 # deploy-job: 
