@@ -24,15 +24,15 @@ test:
   before_script:
     - 'CHCP 65001'
   script:
-    - 'set NUNIT_CONSOLE=%USERPROFILE%\.nuget\packages\nunit.consolerunner\3.15.0\tools\nunit3-console.exe'
-    - '"%NUNIT_CONSOLE%" "UnitTest/UnitTest.MyProject/bin/Release/UnitTest.MyProject.dll" --config=Release --work=.\TestResult --result=TestResult.xml --result=junit-results.xml;transform=nunit3-junit.xslt'
+    - 'set NUNIT_CONSOLE=%USERPROFILE%\.nuget\packages\nunit.consolerunner\3.15.2\tools\nunit3-console.exe'
+    - '"%NUNIT_CONSOLE%" "PuYuanTests.dll" --config=Release --work=. --result=TestResult.xml --result=junit-results.xml;transform=nunit3-junit.xslt'
   artifacts:
     when: always
     paths:
-      - TestResult/junit-results.xml
-      - TestResult/TestResult.xml
+      - junit-results.xml
+      - TestResult.xml
     reports:
-      junit: TestResult/junit-results.xml
+      junit: junit-results.xml
 
 
 # deploy-job: 
