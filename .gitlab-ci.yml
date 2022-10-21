@@ -3,7 +3,7 @@ stages:
     - "test"
     - "deploy"
 
-image : docker
+# image : docker
 # build-image:
 #   stage: build
 #   services:
