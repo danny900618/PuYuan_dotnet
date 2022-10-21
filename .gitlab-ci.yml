@@ -3,31 +3,42 @@ stages:
     - "test"
     - "deploy"
 
-image : docker
-build-image:
-  stage: build
-  services:
-    - docker:dind
-  before_script:
-    - echo "${DOCKERHUB_PWD}" | docker login -u "${DOCKERHUB_USER}" --password-stdin
-  script:
-    - docker build -t $IMAGE_TAG .
-    - echo "docker build finished"
-    - docker push $IMAGE_TAG
-    - echo "docker push finished"
+# image : docker
+# build-image:
+#   stage: build
+#   services:
+#     - docker:dind
+#   before_script:
+#     - echo "${DOCKERHUB_PWD}" | docker login -u "${DOCKERHUB_USER}" --password-stdin
+#   script:
+#     # - docker build -t $IMAGE_TAG .
+#     - echo "docker build finished"
+#     # - docker push $IMAGE_TAG
+#     - echo "docker push finished"
 
 test:
+  image: gabrielaraujof/nunit-console
   stage: test
-  dependencies:
-    - "NUnit test"
+  # dependencies:
+  #   - "build-image"
+  before_script:
+    - 'CHCP 65001'
   script:
-    - nunit-console PuYuanTests.dll
-    - echo "NUnit test..."
+    - 'set NUNIT_CONSOLE=%USERPROFILE%\.nuget\packages\nunit.consolerunner\3.15.2\tools\nunit3-console.exe'
+    - '"%NUNIT_CONSOLE%" "PuYuanTests.dll" --config=Release --work=. --result=TestResult.xml --result=junit-results.xml;transform=nunit3-junit.xslt'
+  artifacts:
+    when: always
+    paths:
+      - junit-results.xml
+      - TestResult.xml
+    reports:
+      junit: junit-results.xml
 
-deploy-job: 
-  stage: deploy     
-  dependencies:
-    - "test"
-  script:
-    - echo "Deploying application..."
-    - echo "Application successfully deployed."
+
+# deploy-job: 
+#   stage: deploy     
+#   dependencies:
+#     - "test"
+#   script:
+#     - echo "Deploying application..."
+#     - echo "Application successfully deployed."
