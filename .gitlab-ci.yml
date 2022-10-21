@@ -31,8 +31,8 @@ test:
     paths:
       # - junit-results.xml
       - TestResult.xml
-    reports:
-      junit: junit-results.xml
+    # reports:
+    #   junit: junit-results.xml
 
 
 # deploy-job: 
