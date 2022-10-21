@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="0" runstate="Runnable" testcasecount="2" result="Passed" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="6" engine-version="3.15.2.0" clr-version="4.0.30319.42000" start-time="2022-10-21 07:25:52Z" end-time="2022-10-21 07:25:53Z" duration="0.713582">
+  <command-line><![CDATA[C:\Users\HOW\.nuget\packages\nunit.consolerunner\3.15.2\tools\nunit3-console.exe  PuYuanTests.dll]]></command-line>
+  <test-suite type="Assembly" id="1-1004" name="PuYuanTests.dll" fullname="C:/Users/HOW/Desktop/lab/dotnet/PuYuan/PuYuanTests/bin/Debug/net6.0/PuYuanTests.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2022-10-21T07:25:53.6220764Z" end-time="2022-10-21T07:25:53.6421002Z" duration="0.019964" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="6">
+    <environment framework-version="3.13.3.0" clr-version="6.0.8" os-version="Microsoft Windows 10.0.19044" platform="Win32NT" cwd="C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuanTests\bin\Debug\net6.0" machine-name="DESKTOP-4P12GAQ" user="HOW" user-domain="DESKTOP-4P12GAQ" culture="zh-TW" uiculture="zh-TW" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuanTests\bin\Debug\net6.0" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETCoreApp,Version=v6.0" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="TargetRuntimeFramework" value="netcore-6.0" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="16056" />
+      <property name="_APPDOMAIN" value="nunit-agent" />
+    </properties>
+    <test-suite type="TestSuite" id="1-1005" name="PuYuan" fullname="PuYuan" runstate="Runnable" testcasecount="2" result="Passed" start-time="2022-10-21T07:25:53.6267936Z" end-time="2022-10-21T07:25:53.6420962Z" duration="0.015302" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="6">
+      <test-suite type="TestSuite" id="1-1006" name="Controllers" fullname="PuYuan.Controllers" runstate="Runnable" testcasecount="2" result="Passed" start-time="2022-10-21T07:25:53.6270112Z" end-time="2022-10-21T07:25:53.6420918Z" duration="0.015080" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="6">
+        <test-suite type="TestSuite" id="1-1007" name="Tests" fullname="PuYuan.Controllers.Tests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2022-10-21T07:25:53.6270200Z" end-time="2022-10-21T07:25:53.6420876Z" duration="0.015068" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="6">
+          <test-suite type="TestFixture" id="1-1000" name="AuthControllerTests" fullname="PuYuan.Controllers.Tests.AuthControllerTests" classname="PuYuan.Controllers.Tests.AuthControllerTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2022-10-21T07:25:53.6283303Z" end-time="2022-10-21T07:25:53.6384547Z" duration="0.010124" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+            <test-case id="1-1001" name="Test_Auth" fullname="PuYuan.Controllers.Tests.AuthControllerTests.Test_Auth" methodname="Test_Auth" classname="PuYuan.Controllers.Tests.AuthControllerTests" runstate="Runnable" seed="452580323" result="Passed" start-time="2022-10-21T07:25:53.6303012Z" end-time="2022-10-21T07:25:53.6360141Z" duration="0.005797" asserts="2" />
+          </test-suite>
+          <test-suite type="TestFixture" id="1-1002" name="RegisterControllerTests" fullname="PuYuan.Controllers.Tests.RegisterControllerTests" classname="PuYuan.Controllers.Tests.RegisterControllerTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2022-10-21T07:25:53.6396357Z" end-time="2022-10-21T07:25:53.6420796Z" duration="0.002444" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="4">
+            <test-case id="1-1003" name="Test_Register" fullname="PuYuan.Controllers.Tests.RegisterControllerTests.Test_Register" methodname="Test_Register" classname="PuYuan.Controllers.Tests.RegisterControllerTests" runstate="Runnable" seed="1005308635" result="Passed" start-time="2022-10-21T07:25:53.6397344Z" end-time="2022-10-21T07:25:53.6420398Z" duration="0.002306" asserts="4" />
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

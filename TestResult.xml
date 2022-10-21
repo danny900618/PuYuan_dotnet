@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="0" runstate="Runnable" testcasecount="0" result="Failed" label="Invalid" total="0" passed="0" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.15.2.0" clr-version="4.0.30319.42000" start-time="2022-10-21 06:45:21Z" end-time="2022-10-21 06:45:21Z" duration="0.293966">
-  <command-line><![CDATA["C:\Users\HOW\.nuget\packages\nunit.consolerunner\3.15.2\tools\nunit3-console.exe" .\PuYuanTests]]></command-line>
-  <test-suite type="Unknown" id="1-1" name="PuYuanTests" fullname="C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuanTests" testcasecount="0" runstate="NotRunnable" result="Failed" label="Invalid">
+<test-run id="0" runstate="Runnable" testcasecount="0" result="Failed" label="Invalid" total="0" passed="0" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.15.2.0" clr-version="4.0.30319.42000" start-time="2022-10-21 07:17:06Z" end-time="2022-10-21 07:17:06Z" duration="0.312077">
+  <command-line><![CDATA[C:\Users\HOW\.nuget\packages\nunit.consolerunner\3.15.2\tools\nunit3-console.exe  PuYuanTests.dll]]></command-line>
+  <test-suite type="Assembly" id="1-1" name="PuYuanTests.dll" fullname="C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuanTests.dll" testcasecount="0" runstate="NotRunnable" result="Failed" label="Invalid">
     <properties>
-      <property name="_SKIPREASON" value="File not found: C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuanTests" />
+      <property name="_SKIPREASON" value="File not found: C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuanTests.dll" />
     </properties>
     <reason>
-      <message>File not found: C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuanTests</message>
+      <message>File not found: C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuanTests.dll</message>
     </reason>
   </test-suite>
 </test-run>
