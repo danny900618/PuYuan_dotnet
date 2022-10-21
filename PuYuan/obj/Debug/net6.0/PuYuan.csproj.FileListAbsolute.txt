@@ -267,3 +267,10 @@ C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuan\bin\Debug\net6.0\BouncyCastle.Cryp
 C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuan\bin\Debug\net6.0\Microsoft.Build.dll
 C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuan\bin\Debug\net6.0\Microsoft.Build.Framework.dll
 C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuan\bin\Debug\net6.0\Microsoft.NET.StringTools.dll
+C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuan\bin\Debug\net6.0\NUnit3.TestAdapter.dll
+C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuan\bin\Debug\net6.0\NUnit3.TestAdapter.pdb
+C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuan\bin\Debug\net6.0\nunit.engine.dll
+C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuan\bin\Debug\net6.0\nunit.engine.api.dll
+C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuan\bin\Debug\net6.0\nunit.engine.core.dll
+C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuan\bin\Debug\net6.0\testcentric.engine.metadata.dll
+C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuan\bin\Debug\net6.0\nunit.framework.dll
