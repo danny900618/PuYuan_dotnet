@@ -19,9 +19,10 @@ build-image:
 test:
   stage: test
   dependencies:
-    - "build-image"
+    - "NUnit test"
   script:
-    - echo "test..."
+    - nunit-console PuYuanTests.dll
+    - echo "NUnit test..."
 
 deploy-job: 
   stage: deploy     
