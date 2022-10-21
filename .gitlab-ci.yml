@@ -29,10 +29,10 @@ test:
   artifacts:
     when: always
     paths:
-      # - junit-results.xml
+      - junit-results.xml
       - TestResult.xml
-    # reports:
-    #   junit: junit-results.xml
+    reports:
+      junit: junit-results.xml
 
 
 # deploy-job: 
