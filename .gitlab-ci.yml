@@ -17,13 +17,15 @@ stages:
 #     - echo "docker push finished"
 
 test:
-  image: bash:latest
+  image: rschmitz/nunit3-console
   stage: test
   # dependencies:
   #   - "build-image"
   # before_script:
   #   - 'CHCP 65001'
   script:
+    - 'nuget restore PuYuan.sln'
+    - 'msbuild "PuYuan.sln" /t:Rebuild /p:Configuration="Release" /p:Platform="Any CPU"'
     - 'set NUNIT_CONSOLE=%USERPROFILE%\.nuget\packages\nunit.consolerunner\3.15.2\tools\nunit3-console.exe'
     - 'set PUYUANTESTS_PATH=PuYuanTests\bin\Debug\net6.0\PuYuanTests.dll'
     - '"%NUNIT_CONSOLE%" "PUYUANTESTS_PATH"'
