@@ -17,7 +17,7 @@ stages:
 #     - echo "docker push finished"
 
 test:
-  image: gabrielaraujof/nunit-console
+  # image: gabrielaraujof/nunit-console
   stage: test
   # dependencies:
   #   - "build-image"
@@ -25,14 +25,14 @@ test:
     - 'CHCP 65001'
   script:
     - 'set NUNIT_CONSOLE=%USERPROFILE%\.nuget\packages\nunit.consolerunner\3.15.2\tools\nunit3-console.exe'
-    - '"%NUNIT_CONSOLE%" "PuYuanTests.dll" --config=Release --work=. --result=TestResult.xml --result=junit-results.xml;transform=nunit3-junit.xslt'
+    - '"%NUNIT_CONSOLE%" "PuYuanTests.dll" --config=Release --work=.\TestResults --result=TestResult.xml --result=junit-results.xml;transform=nunit3-junit.xslt'
   artifacts:
     when: always
     paths:
-      - junit-results.xml
-      - TestResult.xml
+      - TestResults/junit-results.xml
+      - TestResults/TestResult.xml
     reports:
-      junit: junit-results.xml
+      junit: TestResults/junit-results.xml
 
 
 # deploy-job: 
