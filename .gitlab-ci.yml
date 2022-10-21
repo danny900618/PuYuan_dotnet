@@ -24,8 +24,8 @@ test:
   # before_script:
   #   - 'CHCP 65001'
   script:
-    - 'set NUNIT_CONSOLE=C:\Users\HOW\.nuget\packages\nunit.consolerunner\3.15.2\tools\nunit3-console.exe'
-    - 'set PUYUANTESTS_PATH=C:\Users\HOW\Desktop\lab\dotnet\PuYuan\PuYuanTests\bin\Debug\net6.0\PuYuanTests.dll'
+    - 'set NUNIT_CONSOLE=%USERPROFILE%\.nuget\packages\nunit.consolerunner\3.15.2\tools\nunit3-console.exe'
+    - 'set PUYUANTESTS_PATH=PuYuanTests\bin\Debug\net6.0\PuYuanTests.dll'
     - '"%NUNIT_CONSOLE%" "PUYUANTESTS_PATH"'
     # - '"%NUNIT_CONSOLE%" "PuYuanTests.dll" --config=Release --work=.\TestResult --result=TestResult.xml --result=junit-results.xml;transform=nunit3-junit.xslt'
   # artifacts:
