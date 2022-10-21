@@ -21,7 +21,7 @@ test:
   dependencies:
     - "build-image"
   script:
-    - nunit-console PuYuanTests.dll
+    - docker run noksa/nunit nunit PuYuanTests.dll
     - echo "NUnit test..."
 
 deploy-job: 
