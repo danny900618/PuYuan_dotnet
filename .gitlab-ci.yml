@@ -25,7 +25,7 @@ test:
   #   - 'CHCP 65001'
   script:
     - 'set NUNIT_CONSOLE=%USERPROFILE%\.nuget\packages\nunit.consolerunner\3.15.2\tools\nunit3-console.exe'
-    - '"%NUNIT_CONSOLE%" "PuYuanTests.dll" --config=Release --work=.\TestResults --result=TestResult.xml --result=junit-results.xml;transform=nunit3-junit.xslt'
+    - '"%NUNIT_CONSOLE%" "PuYuanTests.dll" --config=Release --result=TestResult.xml --result=junit-results.xml;transform=nunit3-junit.xslt'
   artifacts:
     when: always
     paths:
