@@ -29,7 +29,7 @@ test:
     - dotnet restore
     - cd PuYuanTests
     - echo "dotnet test..."
-    - dotnet test PuYuanTests.csproj --no-build --logger "html;logfilename=TestResult/test-run.xml"
+    - dotnet test PuYuanTests.csproj --no-build --logger "html;logfilename=test-run.xml"
   artifacts:
     when: always
     paths:
