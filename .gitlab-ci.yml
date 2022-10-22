@@ -18,7 +18,7 @@ stages:
 
 test:
   # image: rschmitz/nunit3-console
-  image: appdynamics/dotnet-core-agent:latest
+  image: appdynamics/dotnet-core-agent
   stage: test
   # dependencies:
   #   - "build-image"
