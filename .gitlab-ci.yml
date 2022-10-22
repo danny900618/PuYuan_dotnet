@@ -17,29 +17,14 @@ build-image:
     - echo "docker push finished"
 
 test:
-  # image: rschmitz/nunit3-console
   image: bitnami/dotnet-sdk:latest
   stage: test
-  # dependencies:
-  #   - "build-image"
-  # before_script:
-  #   - 'CHCP 65001'
   script:
     - echo "dotnet restore..."
     - dotnet restore
     - cd PuYuanTests
     - echo "dotnet test..."
     - dotnet test PuYuanTests.csproj
-    # - dotnet test PuYuanTests.csproj --no-build --logger "html;logfilename=test-run.xml"
-  # artifacts:
-  #   when: always
-  #   paths:
-  #     - TestResult/test-run.xml
-      # - TestResult/junit-results.xml
-      # - TestResult/TestResult.xml
-  #   reports:
-  #     junit: TestResult/junit-results.xml
-
 
 deploy-job: 
   stage: deploy     
