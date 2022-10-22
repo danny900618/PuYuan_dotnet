@@ -26,7 +26,10 @@ test:
   #   - 'CHCP 65001'
   script:
     - cd PuYuanTests
-    - dotnet restore && dotnet test --logger "nunit;LogFileName=test-run.xml"
+    - echo "dotnet restore..."
+    - dotnet restore
+    - echo "dotnet test..."
+    - dotnet test --logger "nunit;LogFileName=test-run.xml"
     # - 'nuget restore PuYuan.sln'
     # - 'msbuild "PuYuan.sln"'
     # - 'set NUNIT_CONSOLE=%USERPROFILE%\.nuget\packages\nunit.consolerunner\3.15.2\tools\nunit3-console.exe'
