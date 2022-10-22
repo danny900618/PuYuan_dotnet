@@ -33,7 +33,7 @@ test:
   artifacts:
     when: always
     paths:
-      - test-run.xml
+      - TestResult/test-run.xml
       # - TestResult/junit-results.xml
       # - TestResult/TestResult.xml
   #   reports:
