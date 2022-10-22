@@ -29,13 +29,7 @@ test:
     - dotnet restore
     - cd PuYuanTests
     - echo "dotnet test..."
-    - dotnet test PuYuanTests.csproj --no-build --logger "html;logfilename=test-run.xml"
-    # - 'nuget restore PuYuan.sln'
-    # - 'msbuild "PuYuan.sln"'
-    # - 'set NUNIT_CONSOLE=%USERPROFILE%\.nuget\packages\nunit.consolerunner\3.15.2\tools\nunit3-console.exe'
-    # - 'set PUYUANTESTS_PATH=PuYuanTests\bin\Debug\net6.0\PuYuanTests.dll'
-    # - '"%NUNIT_CONSOLE%" "PUYUANTESTS_PATH"'
-    # - '"%NUNIT_CONSOLE%" "PuYuanTests.dll" --config=Release --work=.\TestResult --result=TestResult.xml --result=junit-results.xml;transform=nunit3-junit.xslt'
+    - dotnet test PuYuanTests.csproj --no-build --logger "html;logfilename=TestResult/test-run.xml"
   artifacts:
     when: always
     paths:
