@@ -3,18 +3,18 @@ stages:
     - "test"
     - "deploy"
 
-# image : docker
-# build-image:
-#   stage: build
-#   services:
-#     - docker:dind
-#   before_script:
-#     - echo "${DOCKERHUB_PWD}" | docker login -u "${DOCKERHUB_USER}" --password-stdin
-#   script:
-#     # - docker build -t $IMAGE_TAG .
-#     - echo "docker build finished"
-#     # - docker push $IMAGE_TAG
-#     - echo "docker push finished"
+image : docker
+build-image:
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - echo "${DOCKERHUB_PWD}" | docker login -u "${DOCKERHUB_USER}" --password-stdin
+  script:
+    - docker build -t $IMAGE_TAG .
+    - echo "docker build finished"
+    - docker push $IMAGE_TAG
+    - echo "docker push finished"
 
 test:
   # image: rschmitz/nunit3-console
@@ -29,21 +29,22 @@ test:
     - dotnet restore
     - cd PuYuanTests
     - echo "dotnet test..."
-    - dotnet test PuYuanTests.csproj --no-build --logger "html;logfilename=test-run.xml"
-  artifacts:
-    when: always
-    paths:
-      - TestResult/test-run.xml
+    - dotnet test PuYuanTests.csproj
+    # - dotnet test PuYuanTests.csproj --no-build --logger "html;logfilename=test-run.xml"
+  # artifacts:
+  #   when: always
+  #   paths:
+  #     - TestResult/test-run.xml
       # - TestResult/junit-results.xml
       # - TestResult/TestResult.xml
   #   reports:
   #     junit: TestResult/junit-results.xml
 
 
-# deploy-job: 
-#   stage: deploy     
-#   dependencies:
-#     - "test"
-#   script:
-#     - echo "Deploying application..."
-#     - echo "Application successfully deployed."
+deploy-job: 
+  stage: deploy     
+  dependencies:
+    - "test"
+  script:
+    - echo "Deploying application..."
+    - echo "Application successfully deployed."
