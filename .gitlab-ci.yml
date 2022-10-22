@@ -29,7 +29,7 @@ test:
     - dotnet restore
     - cd PuYuanTests
     - echo "dotnet test..."
-    - dotnet test PuYuanTests.csproj --no-build --logger "nunit;logfilename=test-run.xml"
+    - dotnet test PuYuanTests.csproj --no-build --logger "html;logfilename=test-run.xml"
     # - 'nuget restore PuYuan.sln'
     # - 'msbuild "PuYuan.sln"'
     # - 'set NUNIT_CONSOLE=%USERPROFILE%\.nuget\packages\nunit.consolerunner\3.15.2\tools\nunit3-console.exe'
