@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using PuYuan.Controllers;
 using System;
@@ -19,8 +19,8 @@ namespace PuYuan.Controllers.Tests
         {
             var db_Account = "testuser";
             var db_Password = "testuser";
-            var login_Account = "testuser";
-            var login_Password = "testuser";
+            var login_Account = "testuser1";
+            var login_Password = "testuser1";
             Assert.AreEqual(db_Account, login_Account);
             Assert.AreEqual(db_Password, login_Password);
         }
