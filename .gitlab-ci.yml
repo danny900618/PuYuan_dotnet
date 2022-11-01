@@ -8,28 +8,33 @@ stages:
 #   stage: build
 #   services:
 #     - docker:dind
-#   before_script:
-#     - echo "${DOCKERHUB_PWD}" | docker login -u "${DOCKERHUB_USER}" --password-stdin
+# #   before_script:
+# #     - echo "${DOCKERHUB_PWD}" | docker login -u "${DOCKERHUB_USER}" --password-stdin
 #   script:
-#     - docker build -t $IMAGE_TAG .
-#     - echo "docker build finished"
-#     - docker push $IMAGE_TAG
-#     - echo "docker push finished"
+#     # - docker build -t $IMAGE_TAG .
+#     # - echo "docker build finished"
+#     # - docker push $IMAGE_TAG
+#     # - echo "docker push finished"
 
-test:
-  image: bitnami/dotnet-sdk:latest
-  stage: test
-  script:
-    - echo "dotnet restore..."
-    - dotnet restore
-    - cd PuYuanTests
-    - echo "dotnet test..."
-    - dotnet test PuYuanTests.csproj
+# test:
+#   image: bitnami/dotnet-sdk:latest
+#   stage: test
+#   script:
+#     - echo "dotnet restore..."
+#     - dotnet restore
+#     - cd PuYuanTests
+#     - echo "dotnet test..."
+#     - dotnet test PuYuanTests.csproj
 
 deploy-job: 
-  stage: deploy     
-  dependencies:
-    - "test"
+  stage: deploy 
+  image:
+    name: bitnami/kubectl:latest
+  # dependencies:
+  #   - "test"
   script:
     - echo "Deploying application..."
     - echo "Application successfully deployed."
+    # - kubectl get nodes
+
+

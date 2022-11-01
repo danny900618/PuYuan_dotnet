@@ -5,15 +5,16 @@ services:
         image: "mcr.microsoft.com/mssql/server:2022-latest"
         ports:
           - "1433:1433"
-
         environment:
             SA_PASSWORD: "Ver7CompleXPW"
             ACCEPT_EULA: "Y"
+        restart: always
+
     api:
+        image: "danny900618/puyuandotnet:latest"
         depends_on:
           - db
-        build:  
-          dockerfile: Dockerfile
         ports:
-          - "8080:80"
+          - "8000:80"
+        restart: always
 
